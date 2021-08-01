@@ -1,0 +1,158 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <br>
+<h1 id="mhi" style="text-align: center; margin-left: 26%; color: blue;">Nurse Profile</h1> <br>
+  <div class="row gutters-sm">
+  
+
+  
+      <div class="col-md-4 mb-3 my-3">
+          <div class="card">
+              <div class="card-body bg-dark">
+                  <div class="d-flex flex-column align-items-center text-center"> <br>
+                      <img src="{{ hr.img.url }}" alt="Admin" class="rounded-circle"
+                          width="150" height="150">
+                      <div class="mt-3">
+                          <h4>{{data.Full_Name}}</h4>
+                          <p class="text-white mb-1">Medical Helper's Nurse</p>
+                          <p class="text-white font-size-sm">{{data.address}}</p> 
+                      </div>
+                  </div>
+                  
+              </div>
+              <div class="btn-group">
+             
+                <a style="height: 60px;" href="{% url 'sr' hr.id %}" class="btn btn-danger"><strong ><h3>Request</h3></strong></a>
+              </div>
+          </div>
+  
+      </div>
+      <div class="col-md-8 my-3">
+          <div class="card mb-3">
+              <div class="card-body bg-dark">
+                  <div class="row">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0 ">Address</h6>
+                      </div>
+                      <div class="col-sm-9 text-white"> {{hr.address}}</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0">Designation</h6>
+                      </div>
+                      <div class="col-sm-9 text-white"> {{hr.helpertype}}</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0">Contact No.</h6>
+                      </div>
+                      <div class="col-sm-9 text-white">{{hr.phone}}</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0">Email-ID</h6>
+                      </div>
+                      <div class="col-sm-9 text-white"> {{hr.email}}</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0">Availability</h6>
+                      </div>
+                      <div class="col-sm-9 text-white">{{hr.is_available}}</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Experience</h6>
+                    </div>
+                    <div class="col-sm-9 text-white">{{hr.experience}} years</div>
+                  </div>
+                  <hr>
+
+
+
+                  
+              </div>
+          </div>
+  
+      </div>
+  </div>
+
+  </div>
+  
+
+
+
+
+{% endblock content %}
+
+
+
+{% block css %}
+  <style>
+     body{
+        size: cover;
+        background-image: url('{% static "app/nursing.jpg" %}');
+        
+        background-repeat: no-repeat;
+        background-size: 110%
+        
+    }
+    h6{
+      color: rgb(0, 139, 253);
+    }
+    #mhi {
+    text-shadow: 3px 5px 8px rgb(253, 253, 253);
+        
+      width: 700px;
+     height: 50px;
+     font-weight: bold;
+     position: relative;
+     animation: myfirst 10s linear 1s infinite alternate;
+ }
+
+ @keyframes myfirst {
+ 
+0%   {left:0px; top:0px;}
+25%  {left:200px; top:0px;}
+50%  {left:0px; top:0px;}
+75%  {left:200px; top:0px;}
+100% {left:0px; top:0px;}
+}
+footer{
+            margin-top: 520px!important;
+        }
+  </style>
+{% endblock css %}
+  

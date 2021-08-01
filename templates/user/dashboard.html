@@ -1,0 +1,75 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+  <style>
+    #myjumbo{
+      background-image: url('{% static "app/jumbo.jpg" %}');
+        
+        background-repeat: no-repeat;
+        height: 10cm;
+        background-size: 100%
+    }
+    
+  </style>
+{% endblock css %}
+  
+
+{% block content %}
+
+
+
+<div class="jumbotron bg-danger " id="myjumbo">
+  <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;" class="display-4"><b>Hello {{user}}</b></h1>
+  <p style="text-align: center;" class="lead">This <strong>website</strong> providing a health care treatment with specialize medical and nursing staff and medicals equipment
+    at <strong> home</strong>.
+
+  </p>
+  <hr class="my-4">
+  <p style="text-align: center;">There are various facilities available and we will provide <strong> medical equipments</strong> which can easily take a facilities of rental.</p>
+  
+</div>
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 my-6">
+      <div class="card h-60">  
+        <img src='{% static "app/pic.jpeg" %}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Purchase medical equipments</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'pc' %}" class="btn btn-primary">Purchase</a>
+        </div>
+      
+      </div>    
+    </div>
+    <div class="col-md-6 my-6">
+      <div class="card h-60">
+        <img src='{% static "app/pichr.jpg" %}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Human Resource</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'view_hr' %}" class="btn btn-primary"> Home Services</a>
+        </div>
+      </div>
+      
+    </div>
+
+
+</div>
+</div>
+<br><br><br>
+
+
+{% endblock content %}

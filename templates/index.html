@@ -1,0 +1,51 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+  footer{
+            margin-top: 640px!important;
+        }
+  body{
+    background-image: url('{% static "app/home3.jpg" %}');
+    size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+   
+     }
+     #myheading{
+       
+        text-shadow: 3px 5px 8px rgb(253, 253, 253);
+        
+    }
+    
+</style>
+{% endblock css %}
+  
+
+
+
+{% block content %}
+
+   <div class="container">
+       <div class="row">
+           <div class="col mx-auto my-5 text-center"> <br>
+            <h1 style="font-family: cursive;"><b id="myheading">Our motive is provides medical's services at your home</b></h1> <br>
+            <h4 id="myheading">Hospital at Home® is an innovative care model for adoption by health care organizations that provides hospital-level 
+              care in a patient’s home as a full substitute for acute hospital care. The program is being implemented at numerous 
+              sites around the United States by VA hospitals, health systems (including Presbyterian Health System), home care 
+              providers, and managed care programs as a tool to cost-effectively treat acutely ill older adults, while improving 
+              patient safety, quality, and satisfaction.</h4>
+           </div>
+       </div>
+   </div>
+
+
+
+  
+  {% endblock content %}
+
+
+
+
+   

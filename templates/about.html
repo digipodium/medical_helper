@@ -1,0 +1,146 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<!-- <link rel="stylesheet" href="{% static 'css/about.css' %}"> -->
+
+<style>
+    
+    body{
+        size: cover;
+        background-image: url('{% static "app/aboutusbackground2.jpg" %}');
+        
+        background-repeat: no-repeat;
+        background-size: 100%
+        
+    }
+     #mhi {
+        text-shadow: 3px 5px 8px rgb(253, 253, 253);
+      
+        
+      width: 700px;
+     height: 50px;
+     font-weight: bold;
+     position: relative;
+     animation: myfirst 10s linear 1s infinite alternate;
+ }
+
+ @keyframes myfirst {
+ 
+0%   {left:0px; top:0px;}
+25%  {left:200px; top:0px;}
+50%  {left:0px; top:0px;}
+75%  {left:200px; top:0px;}
+100% {left:0px; top:0px;}
+}
+</style>
+{% endblock css %}
+
+{% block content %}
+
+
+<br>
+<h1 id="mhi" style="text-align: center; margin-left: 26%; color: blue;">About Us</h1> <br>
+<div class="container">
+    <div>
+        <table border="0">
+            <tr>
+                <td width="700px">
+                    <br>      
+                    <font color="#000" size="6px"> Best Medical & Health care Needs to Our Patients </font> <br> <br>
+                    
+                    
+                    
+                    Home Hospital delivers quality care with compassion. We bring world class medical care into our
+                    patients’ homes and aim to make primary healthcare not only more accessible, but also more
+                    affordable and accountable to our patients’ needs.
+                    
+                    <br><br>
+                    
+                    <br>
+                </td>
+                
+                
+                <td style="padding-left:50px;"> <img src="{% static 'app/medicineabout.jpg' %}" width="700px"></td>
+            </tr>
+            
+            
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div>
+        <table border="0">
+            <tr>
+               
+                <td > <img src="{% static 'app/nurseabout.jpg' %}" width="700px"></td>
+            
+
+            <td style="padding-left:50px;" width="700px">
+                <br>
+               
+                
+                <font  color="#000" size="6px"> Best Medical & Health care Needs to Our Patients </font> <br> <br>
+                
+                
+                
+                Home Hospital delivers quality care with compassion. We bring world class medical care into our
+                patients’ homes and aim to make primary healthcare not only more accessible, but also more
+                affordable and accountable to our patients’ needs.
+                
+                <br><br>
+                
+                <br>
+            </td>
+        </tr>
+            
+            
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <div>
+        <table border="0">
+            <tr>
+                <td width="700px">
+                    <br>
+                    
+                    <font color="#000" size="6px"> Best Medical & Health care Needs to Our Patients </font> <br> <br>
+                    
+                    
+                    
+                    Home Hospital delivers quality care with compassion. We bring world class medical care into our
+                    patients’ homes and aim to make primary healthcare not only more accessible, but also more
+                    affordable and accountable to our patients’ needs.
+                    
+                    <br><br>
+                    
+                    <br>
+                </td>
+                
+                
+                <td style="padding-left:50px;"> <img src="{% static 'app/aboutus.jpeg' %}" width="700px"></td>
+            </tr>
+            
+            
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+{% block js %}
+{% endblock js %}

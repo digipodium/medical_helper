@@ -1,0 +1,114 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<br>
+<div class="container pb-5 mt-n2 mt-md-n3 my-4">
+    <div class="row">
+        
+        
+        <div class="col-xl-9 col-md-8">
+            <h2 class="h6 d-flex flex-wrap justify-content-between align-items-center px-4 py-3 bg-secondary"><span>Products</span><a class="font-size-sm" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left" style="width: 1rem; height: 1rem;"><polyline points="15 18 9 12 15 6"></polyline></svg>Continue shopping</a></h2>
+            <!-- Item-->
+            {% for record in equipments %} 
+            <div class="d-sm-flex justify-content-between my-4 pb-4 border-bottom">
+                <div class="media d-block d-sm-flex text-center text-sm-left">
+                    <a class="cart-item-thumb mx-auto mr-sm-4" href="#"><img src={{record.image.url}} alt="Product"></a>
+                    <div class="media-body pt-3">
+                        <h3 class="product-card-title font-weight-semibold border-0 pb-0"><a href="#">{{record.name}}</a></h3>
+                        <div class="font-size-sm"><span class="text-muted mr-2">Category:</span>{{record.catagory}}</div>
+                        <!-- <div class="font-size-sm"><span class="text-muted mr-2">Description:</span>{{record.Description}}</div> -->
+                        
+                        
+
+                        <div>
+                            
+                                <details>
+                                    <summary>Product Description</summary>
+                                    <div style="width: 12cm;" class="container">
+                                    <p>{{record.Description}}</p>
+                                    </div>
+                                  </details>
+                            
+                        </div>
+                        
+                        
+                        <div class="font-size-lg text-primary pt-2"><span class="font-size-sm"><span class="text-dark mr-2">Purchasing Price :</span></span> {{record.price}} Rs.</div>
+                        <div class="font-size-lg text-primary pt-2"><span class="font-size-sm"><span class="text-dark mr-2">Rent Price :</span></span> {{record.rent_price}} Rs.</div>
+                       
+                        <!-- <div class="font-size-lg text-primary pt-2">Rent Price: {{record.rent_price}} Rs.</div> -->
+                        {% if record.availability %}
+                        <div class="font-size-lg text-primary pt-2">Available</div>
+                        {% else %}
+                        <div class="font-size-lg text-primary pt-2">Not Available</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem;">
+                    <a href="{% url 'cart_add' record.id %}" class="btn btn-outline-secondary btn-sm btn-block mb-2" type="button">
+                      Purchase Item
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>   
+    </div>
+</div>
+
+
+    
+{% endblock content %}
+
+
+
+{% block css %}
+<style>
+
+body{
+    margin-top:20px;
+   
+    }
+.cart-item-thumb {
+    display: block;
+    width: 10rem
+}
+
+.cart-item-thumb>img {
+    display: block;
+    width: 100%
+}
+
+.product-card-title>a {
+    color: #222;
+}
+
+.font-weight-semibold {
+    font-weight: 600 !important;
+}
+
+.product-card-title {
+    display: block;
+    margin-bottom: .75rem;
+    padding-bottom: .875rem;
+    border-bottom: 1px dashed #e2e2e2;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.text-muted {
+    color: #888 !important;
+}
+
+.bg-secondary {
+    background-color: #f7f7f7 !important;
+}
+
+.accordion .accordion-heading {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.font-weight-semibold {
+    font-weight: 600 !important;
+}
+</style>
+{% endblock css %}
