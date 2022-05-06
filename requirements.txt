@@ -2,3 +2,5 @@ django
 social-auth-app-django
 django-crispy-forms
 pillow
+django-shopping-cart
+django-extensions
